@@ -45,13 +45,20 @@ def fragancias(request):
 
     return render(request,"fragancias.html", context)
 
-def detalles_productos(request, id):
+def detalles_fragancia(request, id):
     context = {}
 
-    polera = Polera.objects.filter(id=id).first()
-    fragancia = Fragancia.objects.filter(id=id).first()
+    fragancia = Fragancia.objects.get(id=id)
 
-    context['polera'] = polera
     context['fragancia'] = fragancia
 
-    return render(request, "detalles_producto.html", context)
+    return render(request, "detalles_fragancia.html", context)
+
+def detalles_polera(request, id):
+    context = {}
+
+    polera = Polera.objects.get(id=id)
+
+    context['polera'] = polera
+
+    return render(request, "detalles_polera.html", context)

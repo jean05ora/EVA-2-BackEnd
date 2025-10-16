@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Generic - Spectral by HTML5 UP</title>
+		<title>Productos disponibles </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
@@ -47,11 +47,12 @@
 									<div class="image-grid">
 										{% for f in fragancia %}
 										<div class="image-item">
-											<a href="{% url 'index' %}">
-												<img src="{{ f.imagen_fragancia }}">
-												<p>{{f.nombre_fragancia}}</p>
+											<a href="{% url 'detalles-fragancia' f.id%}">
+												<img src="{{ f.imagen_fragancia}}">
+												<p>{{f.nombre_fragancia}} </p>
 											</a>
 											<p>Precio: ${{f.precio_fragancia}}</p>
+											<p>Unidades: {{f.stock_fragancia}}</p>
 										</div>
 										{% endfor %}
 									</div>
@@ -64,11 +65,12 @@
 									<div class="image-grid">
 										{% for p in polera %}
 										<div class="image-item">
-											<a href="{% url 'index' %}">
+											<a href="{% url 'detalles-polera' p.id %}">
 												<img src="{{ p.imagen_polera }}">
 												<p>{{ p.nombre_polera }}</p>
 											</a>
 											<p> Precio: ${{p.precio_polera}}</p>
+											<p> Unidades: {{p.stock_polera}}</p>
 										</div>
 										{% endfor %}
 									</div>
