@@ -15,6 +15,7 @@ class Polera(models.Model):
 class Fragancia(models.Model):
     nombre_fragancia = models.CharField(max_length=155)
     precio_fragancia = models.PositiveIntegerField()
+    tipo_fragancia = models.CharField(max_length=55, default='')
     stock_fragancia = models.PositiveIntegerField()
     descripcion_fragancia = models.TextField()
     imagen_fragancia = models.CharField(max_length=555)

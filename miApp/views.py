@@ -1,34 +1,47 @@
 from django.shortcuts import render
 from .models import Polera, Fragancia
 
+def index(request):
+    return render(request, "index.html")
+
+def generic(request):
+    return render(request, "generic.html")
+
+def elements(request):
+    return render(request, "elements.html")
+
+####
+######
+#######
+
 def main(request):
     return render(request, "main.html")
 
 def poleras(request):
     context = {}
 
-    poleras = Polera.objects.all
+    polera = Polera.objects.all()
 
-    context['poleras'] = poleras
+    context['polera'] = polera
 
     return render(request,"poleras.html", context)
 
 def fragancias(request):
     context = {}
 
-    fragancias = Fragancia.objects.all
+    fragancia = Fragancia.objects.all()
 
-    context['fragancias'] = fragancias
+    context['fragancia'] = fragancia
 
     return render(request,"fragancias.html", context)
 
 def detalles_productos(request, id):
     context = {}
 
-    poleras = Polera.objects.get(id=id)
-    fragancias = Fragancia.objects.get(id=id)
+    polera = Polera.objects.filter(id=id).first()
+    fragancia = Fragancia.objects.filter(id=id).first()
 
-    context['poleras'] = poleras 
-    context['fragancias'] = fragancias
+    context['polera'] = polera
+    context['fragancia'] = fragancia
 
     return render(request, "detalles_producto.html", context)
