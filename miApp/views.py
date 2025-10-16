@@ -17,6 +17,16 @@ def elements(request):
 def main(request):
     return render(request, "main.html")
 
+def categorias(request):
+    context = {}
+    polera = Polera.objects.all()
+    fragancia = Fragancia.objects.all()
+
+    context['polera'] = polera
+    context['fragancia'] = fragancia
+
+    return render(request, "categorias.html", context)
+
 def poleras(request):
     context = {}
 

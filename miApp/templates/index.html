@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Spectral by HTML5 UP</title>
+		<title>Ecom-HUB -- Diseño por HTML5up</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
@@ -24,8 +24,9 @@
 									<div id="menu">
 										<ul>
 											<li><a href="{% url 'index' %}">Inicio</a></li>
-											<li><a href="{% url 'generic' %}">Generic</a></li>
-											<li><a href="{% url 'elements' %}">Elements</a></li>
+											<li><a href="{% url 'categorias' %}">Productos</a></li>
+											<li><a href="{% url 'categoria-fragancias' %}">Fragancias</a></li>
+											<li><a href="{% url 'categoria-poleras' %}">Poleras</a></li>
 											<li><a href="#">Sign Up</a></li>
 											<li><a href="#">Log In</a></li>
 										</ul>
@@ -43,7 +44,7 @@
 							Fragancias<br />
 							Diseño de  <a href="http://html5up.net">HTML5 UP</a>.</p>
 							<ul class="actions special">
-								<li><a href="#" class="button primary">Ver productos</a></li>
+								<li><a href="{% url 'categorias' %}" class="button primary">Ver productos</a></li>
 							</ul>
 						</div>
 						<a href="#one" class="more scrolly">Ver mas</a>

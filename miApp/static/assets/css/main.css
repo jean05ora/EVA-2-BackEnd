@@ -33,6 +33,31 @@ body {
 	line-height: 1;
 }
 
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 250px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.image-item p {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
 ol, ul {
 	list-style: none;
 }
