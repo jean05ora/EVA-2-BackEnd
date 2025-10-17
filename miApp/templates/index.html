@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ecom-HUB -- Diseño por HTML5up</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}"></noscript>
+
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="{% url 'index' %}">Ecom-HUB</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="{% url 'index' %}">Inicio</a></li>
+											<li><a href="{% url 'categorias' %}">Productos</a></li>
+											<li><a href="#">Sign Up</a></li>
+											<li><a href="#">Log In</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Ecom-HUB</h2>
+							<p>Poleras y<br />
+							Fragancias<br />
+							Diseño de  <a href="http://html5up.net">HTML5 UP</a>.</p>
+							<ul class="actions special">
+								<li><a href="{% url 'categorias' %}" class="button primary">Ver productos</a></li>
+							</ul>
+						</div>
+						<a href="#one" class="more scrolly">Ver mas</a>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Conoce nuestras poleras<br />
+								Marcado serial, estampados </h2>
+								<p>Poleras de calidad premium, estampados originales<br />
+								bandas, series, shows o diseños personalizados</p>
+							</header>
+							<ul class="icons major">
+								<li>
+									<img src="{% static 'images/TSSF.webp' %}" alt="Lorem" class="major style1" width="220", height="250"/>
+									<span class="label"></span>
+								</li>
+								<li>
+									<img src="{% static 'images/sopranoxd.jpg' %}" alt="Ipsum" class="major style2" width="260", height="220"/>
+									<span class="label"></span>
+								</li>
+								<li>
+									<img src="{% static 'images/tssf-stickerpack.webp' %}" alt="Dolor" class="major style3" width="250" height="220"/>
+									<span class="label"></span>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper alt style2">
+						<section class="spotlight">
+							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
+								<h2>Deslumbra tu olfato con <br />
+								fragancias de calidad</h2>
+								<p>Clones y originales, importadas desde sus casas</p>
+							</div>
+						</section>
+						<section class="spotlight">
+							<ul class="icons major">
+								<li>
+									<img src="{% static 'images/santal-33.webp' %}" alt="Lorem" class="major style1" width="220", height="250"/>
+									<span class="label"></span>
+								</li>
+								<li>
+									<img src="{% static 'images/spicebomb-dl.webp' %}" alt="Ipsum" class="major style2" width="260", height="220"/>
+									<span class="label"></span>
+								</li>
+								<li>
+									<img src="{% static 'images/lemade-elixir.jpeg' %}" alt="Dolor" class="major style3" width="250" height="220"/>
+									<span class="label"></span>
+								</li>
+							</ul>
+						</section>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style3 special">
+						<div class="inner">
+							<header class="major">
+								<h2>ECOM-HUB</h2>
+								<p>Conocenos!<br /></p>
+							</header>
+							<ul class="features">
+								<li class="icon fa-paper-plane">
+									<h3>Envios a domicilio</h3>
+									<p>Envios a domicilio por Starken, Bluexpress, Chileexpress.
+										99% de satisfaccion de usuarios 
+									</p>
+								</li>
+								<li class="icon solid fa-laptop">
+									<h3>ECOM-HUB APP</h3>
+									<p>Descarga nuestra aplicacion y obten las ultimas noticias de productos nuevos.</p>
+								</li>
+								<li class="icon solid fa-laptop">
+									<h3>Proximamente</h3>
+									<p>Pantalones, Polerones, Accesorios</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- CTA -->
+					<section id="cta" class="wrapper style4">
+						<div class="inner">
+							<header>
+								<h2>Tienes algun problema o consulta?</h2>
+								<p>Escribenos a nuestro correo o ponte en contacto con nosotros!</p>
+							</header>
+							<ul class="actions stacked">
+								<li><a href="#" class="button fit primary">Escribenos!</a></li>
+								<li><a href="#" class="button fit">Sugerencias</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+
+	</body>
+</html>
