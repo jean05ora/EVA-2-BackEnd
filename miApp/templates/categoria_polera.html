@@ -2,12 +2,11 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Detalles de su producto</title>
+		<title>Productos disponibles </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
 		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}"></noscript>
-
 
 	</head>
 	<body class="is-preload">
@@ -26,11 +25,8 @@
 										<ul>
 											<li><a href="{% url 'index' %}">Inicio</a></li>
 											<li><a href="{% url 'categorias' %}">Productos</a></li>
-<<<<<<< HEAD
-=======
 											<li><a href="{% url 'categoria_fragancia' %}">Accesorios</li>
 											<li><a href="{% url 'categoria_polera' %}">Vestimenta</li>
->>>>>>> master
 											<li><a href="#">Sign Up</a></li>
 											<li><a href="#">Log In</a></li>
 										</ul>
@@ -43,59 +39,29 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Detalles del producto</h2>
+							<h2>Vestimenta</h2>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
+								<div>
+									<h2 class="nueo">Poleras </h2>
+									<div class="image-grid">
+										{% for p in polera %}
+										<div class="image-item">
+											<a href="{% url 'detalles-polera' p.id %}">
+												<img src="{{ p.imagen_polera }}">
+												<p>{{ p.nombre_polera }}</p>
+											</a>
+											<p> Precio: ${{p.precio_polera}}</p>
+											<p> Unidades: {{p.stock_polera}}</p>
+										</div>
+										{% endfor %}
+									</div>
+								</div>
 
-								<section>
-									<h2>Producto </h2>
-									<p><strong>{{polera.nombre_polera}}</strong></p>
-									<img src="{{polera.imagen_polera}}" width="350" height="350">
-									<p><strong>Precio producto C/U: $</strong>{{polera.precio_polera}}</p>
-									<hr />
-									
-									<h2>Descripcion producto</h2>
-									<p>{{polera.descripcion_polera}}</p>
-									
-									<hr />
-									<h2>Stock</h2>
-									<p>Unidades disponibles: {{polera.stock_polera}}</p>
+								<hr />
 
-									<hr />
-								</section>	
-
-								<section>
-									<h4>Buttons</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button large">Large</a></li>
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions fit">
-										<li><a href="#" class="button fit">Fit</a></li>
-										<li><a href="#" class="button primary fit">Fit</a></li>
-										<li><a href="#" class="button fit">Fit</a></li>
-									</ul>
-									<ul class="actions fit small">
-										<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-										<li><a href="#" class="button fit small">Fit + Small</a></li>
-										<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
+								
 							</div>
 						</section>
 					</article>
