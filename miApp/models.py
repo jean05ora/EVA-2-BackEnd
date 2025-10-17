@@ -19,6 +19,7 @@ class Fragancia(models.Model):
     stock_fragancia = models.PositiveIntegerField()
     descripcion_fragancia = models.TextField()
     imagen_fragancia = models.CharField(max_length=555)
+    link_fragancia = models.CharField(max_length=555, default='')
 
     def __str__(self):
         return self.nombre_fragancia
