@@ -39,13 +39,12 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Productos disponibles</h2>
-                            <p>Conoce todos nuestro catalogo!</p>
+							<h2>Accesorios</h2>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
 								<div>
-									<h2>Fragancias </h2>
+									<h2 class="nueo">Fragancias </h2>
 									<div class="image-grid">
 										{% for f in fragancia %}
 										<div class="image-item">
@@ -59,24 +58,7 @@
 										{% endfor %}
 									</div>
 								</div>
-
 								<hr />
-
-								<div>
-									<h2>Poleras </h2>
-									<div class="image-grid">
-										{% for p in polera %}
-										<div class="image-item">
-											<a href="{% url 'detalles-polera' p.id %}">
-												<img src="{{ p.imagen_polera }}">
-												<p>{{ p.nombre_polera }}</p>
-											</a>
-											<p> Precio: ${{p.precio_polera}}</p>
-											<p> Unidades: {{p.stock_polera}}</p>
-										</div>
-										{% endfor %}
-									</div>
-								</div>
 							</div>
 						</section>
 					</article>

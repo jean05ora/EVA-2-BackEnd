@@ -33,6 +33,17 @@ body {
 	line-height: 1;
 }
 
+.nueo {
+	font-size: 80px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-style: italic;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50vw;
+
+}
+
 .image-grid {
     display: flex;
     flex-wrap: wrap;

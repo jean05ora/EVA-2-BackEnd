@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Polera, Fragancia
 
 def index(request):
@@ -27,23 +27,23 @@ def categorias(request):
 
     return render(request, "categorias.html", context)
 
-def poleras(request):
+def categoria_fragancia(request):
     context = {}
-
-    polera = Polera.objects.all()
-
-    context['polera'] = polera
-
-    return render(request,"poleras.html", context)
-
-def fragancias(request):
-    context = {}
-
+    
     fragancia = Fragancia.objects.all()
-
+    
     context['fragancia'] = fragancia
+    
+    return render(request, "categoria_fragancia.html", context)
 
-    return render(request,"fragancias.html", context)
+def categoria_polera(request):
+    context = {}
+    
+    polera = Polera.objects.all()
+    
+    context['polera'] = polera
+    
+    return render(request, "categoria_polera.html", context)
 
 def detalles_fragancia(request, id):
     context = {}
