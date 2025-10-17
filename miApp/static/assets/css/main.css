@@ -33,8 +33,6 @@ body {
 	line-height: 1;
 }
 
-<<<<<<< HEAD
-=======
 .nueo {
 	font-size: 80px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -46,7 +44,6 @@ body {
 
 }
 
->>>>>>> master
 .image-grid {
     display: flex;
     flex-wrap: wrap;
